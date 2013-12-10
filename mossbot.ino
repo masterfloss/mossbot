@@ -3,13 +3,8 @@
 // 
 
 
-//TODO: criar classes próprias para motor e ultrasom
-//#include <motores.ino>
-//#include <ultrasom.ino>
-
-
 //Parâmetros do MOSSBot
-const int SafeDistance = 15; //segundos
+const int SafeDistance = 15; //centímetros
 const int LoopCicleDelay = 20; //milisegundos
 
 bool turningLeft = false;
@@ -65,7 +60,7 @@ int DecideBestDirection()
 		    	//TODO: invocar motor vira à direita
 			//motor.turnRight(50);
 		    	//digtialWrite(dir, HIGH);
-			Serial.println("Turning Right");
+			Serial.println("Vira à direita");
 		}
 		else
 		{
@@ -76,7 +71,7 @@ int DecideBestDirection()
 		    //TODO: invocar motor vira à esquerda
 		    //motor.turnLeft(50);
 		    //digtialWrite(dir, LOW);
-	            Serial.println("Turning Left");
+	            Serial.println("Vira à esquerda");
 		  }
 		}
 	}
