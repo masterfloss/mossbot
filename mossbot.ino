@@ -2,6 +2,8 @@
 // MOSSBot
 // 
 
+const int SafeDistance = 15;
+
 bool turningLeft = false;
 bool turningRight = false;
 
@@ -23,8 +25,8 @@ int DecideBestDirection()
   Serial.print("Distância actual = ");
   Serial.print(distance);
   
-  //MFV++ distância de segurança pode passar a parâmetro
-  if(distance < 15)
+  //MFV++ distância de segurança 
+  if(distance < SafeDistance)
 	{
 	  //valida se já está a virar para algum lado
 		if (turningLeft)
