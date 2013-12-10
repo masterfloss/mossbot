@@ -2,7 +2,6 @@
 // MOSSBot
 // 
 
-
 //Parâmetros do MOSSBot
 const int SafeDistance = 15; //centímetros
 const int LoopCicleDelay = 20; //milisegundos
@@ -10,17 +9,31 @@ const int LoopCicleDelay = 20; //milisegundos
 bool turningLeft = false;
 bool turningRight = false;
 
+//Standard PWM DC control
+int E1 = 5;     //Controlo de velocidade de M1 
+int E2 = 6;     //Controlo de velocidade de M2 
+int M1 = 4;    //Controlo de direcção de M1 
+int M2 = 7;    //Controlo de direcção de  M1 
+
+#define trigPin 2
+#define echoPin 3
 
 //MFV++ Configurações do MOSSBot
 void setup() 
 { 
   Serial.begin(9600);
-  //TODO: declarar portas de motores e ultrasom, aqui ou nas classes próprias
+  
+  //ultrasom
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  
   //Declarar Portas dos Motores
-  //pinMode(2, OUTPUT);
-  //pinMode(3, INPUT);
-  //pinMode(4, OUTPUT);pinMode(5, OUTPUT);     
-  //pinMode(6, OUTPUT);pinMode(7, OUTPUT);  	
+  pinMode(2, OUTPUT);
+  pinMode(3, INPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);     
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);  	
 } 
 
 //MFV++ Deverá passar a classe própria
@@ -80,12 +93,50 @@ int DecideBestDirection()
 }
 
 
-//MFV++ Deverá passar a classe própria
-//TODO: criar classe própria e implementar função
-//pode ser aproveitado o código do ultrasom.ino
-int SonnarGetDistance()
-{
+//Passar a classe motores
+void stop(void){
+//Stop
+  digitalWrite(E1,LOW);  
+  digitalWrite(E2,LOW);     
+}  
 
+//Passar a classe motores
+void virar_D(int a,int b) {
+  analogWrite (E1,a);      
+  digitalWrite(M1,HIGH);   
+  analogWrite (E2,b);   
+  digitalWrite(M2,HIGH);
+
+}
+
+//Passar a classe motores
+void andar_F (int a,int b){
+  analogWrite (E1,a);
+  digitalWrite(M1,HIGH);   
+  analogWrite (E2,b);   
+  digitalWrite(M2,LOW);
+  
+}
+
+//Passar a classe motores
+void virar_E(int a,int b) {
+  analogWrite (E1,a);
+  digitalWrite(M1,LOW);  
+  analogWrite (E2,b);   
+  digitalWrite(M2,LOW);
+  
+}
+
+
+//passar a classe ultrasom
+int medir_dist(){
+  int dur, dist;
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(1000);
+  digitalWrite(trigPin, LOW);
+  dur = pulseIn(echoPin, HIGH);
+  dist = (dur/2) / 29.1;
+  return dist;
 }
 
 
