@@ -7,7 +7,7 @@
 
 
 const int SafeDistance = 15;
-const int LoopCicle = 20; //milisegundos
+const int LoopCicleDelay = 20; //milisegundos
 
 bool turningLeft = false;
 bool turningRight = false;
@@ -93,5 +93,5 @@ void loop()
 {
   //MFV++ Iteração contínua
   DecideBestDirection();
-  delay(20);
+  delay(LoopCicleDelay);
 }
