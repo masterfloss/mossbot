@@ -29,7 +29,7 @@ int DecideBestDirection()
   // MFV++
   // Verifica a distância
   // a que se encontra de possíveis obstáculos
-  int distance = SonnarGetDistance();
+  int distance = medir_dist();;
   Serial.print("Distância actual = ");
   Serial.print(distance);
   
@@ -38,15 +38,15 @@ int DecideBestDirection()
   {
 	//valida se já está a virar para algum lado
 	if (turningLeft)
-		//TODO: invocar motor vira à esquerda
-		//continua a virar à esquerda
+		virar_E(100,100);
 	else if (turningRight)
-		//TODO: invocar motor vira à direita
 		//continua a virar à direita
+		virar_D(100,100);
 	else
 	{
 		//TODO: invocar motor pára
 		//parar motor
+		stop();
 		 
 		//se tiver servo no futuro, poderemos validar se temos obstáculo à esquerda ou à direita e escolher
 		//para já vira para um lado qualquer
@@ -56,10 +56,7 @@ int DecideBestDirection()
 			//vira à direita
 			turningRight = true;
 		    	turningLeft = false;
-		    	//Implementar classe motor
-		    	//TODO: invocar motor vira à direita
-			//motor.turnRight(50);
-		    	//digtialWrite(dir, HIGH);
+		    	virar_D(100,100);
 			Serial.println("Vira à direita");
 		}
 		else
@@ -67,10 +64,7 @@ int DecideBestDirection()
 		    //vira à esquerda
 		    turningLeft = true;
 		    turningRight = false;
-		    //Implementar classe motor
-		    //TODO: invocar motor vira à esquerda
-		    //motor.turnLeft(50);
-		    //digtialWrite(dir, LOW);
+		    virar_E(100,100);
 	            Serial.println("Vira à esquerda");
 		  }
 		}
@@ -79,8 +73,7 @@ int DecideBestDirection()
 	{
 		turningLeft = false;
 		turningRight = false;
-		//implementar
-		//motor.moveForward(50);
+		andar_F(100,100);
 	}
  
   
