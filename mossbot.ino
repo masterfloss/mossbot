@@ -1,8 +1,11 @@
 // MFV++ 
 // MOSSBot
 // 
+// A nxt4you and MOSS project
+// Versão inicial que se desvia de obstáculos
+// 
 
-//Parâmetros do MOSSBot
+//Parâmetros do MOSSBot ==========================================
 const int SafeDistance = 15; //centímetros
 const int LoopCicleDelay = 20; //milisegundos
 
@@ -12,15 +15,17 @@ const int fullSpeed = 255; //velocidade máxima
 bool turningLeft = false;
 bool turningRight = false;
 
-
+//Pins  ==========================================================
 //Standard PWM DC control
 #define E1 5;    //Controlo de velocidade de M1 
 #define E2 6;    //Controlo de velocidade de M2 
 #define M1 4;    //Controlo de direcção de M1 
-#define M2 7;    //Controlo de direcção de  M1 
-
-#define trigPin 2
+#define M2 7;    //Controlo de direcção de  M2 
+//ultrasom
+#define trigPin 2   
 #define echoPin 3
+
+// Setup =========================================================
 
 //MFV++ Configurações do MOSSBot
 void setup() 
@@ -40,6 +45,16 @@ void setup()
   
   Serial.begin(19200);  
 } 
+
+// Loop ==========================================================
+void loop() 
+{
+  //MFV++ Iteração contínua
+  DecideBestDirection();
+  delay(LoopCicleDelay);
+}
+
+// Obstacle Avoidance Behaviour ==================================
 
 //MFV++ Deverá passar a classe própria
 int DecideBestDirection()
@@ -155,12 +170,4 @@ int medir_dist(){
   dur = pulseIn(echoPin, HIGH);
   dist = (dur/2) / 29.1;
   return dist;
-}
-
-
-void loop() 
-{
-  //MFV++ Iteração contínua
-  DecideBestDirection();
-  delay(LoopCicleDelay);
 }
