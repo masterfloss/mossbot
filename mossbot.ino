@@ -17,10 +17,10 @@ bool turningRight = false;
 
 //Pins  ==========================================================
 //Standard PWM DC control
-#define E1 5;    //Controlo de velocidade de M1 
-#define E2 6;    //Controlo de velocidade de M2 
-#define M1 4;    //Controlo de direcção de M1 
-#define M2 7;    //Controlo de direcção de  M2 
+int E1 = 5;    //Controlo de velocidade de M1 
+int E2 = 6;    //Controlo de velocidade de M2 
+int M1 = 4;    //Controlo de direcção de M1 
+int M2 = 7;    //Controlo de direcção de  M2 
 //ultrasom
 #define trigPin 2   
 #define echoPin 3
@@ -69,55 +69,54 @@ int DecideBestDirection()
   //MFV++ distância de segurança 
   if(distance < SafeDistance)
   {
-	//valida se já está a virar para algum lado
-	if (turningLeft)
-		virar_E(turnSpeed,turnSpeed);
-	else if (turningRight)
-		//continua a virar à direita
-		virar_D(turnSpeed,turnSpeed);
-	else
-	{
-		//TODO: invocar motor pára
-		//parar motor
-		stop();
-		 
-		//se tiver servo no futuro, poderemos validar se temos obstáculo à esquerda ou à direita e escolher
-		//para já vira para um lado qualquer
-		 
-		if(random(100) > 50)
-		{
-			//vira à direita
-			turningRight = true;
-		    	turningLeft = false;
-		    	virar_D(turnSpeed,turnSpeed);
-			Serial.println("Vira à direita");
-		}
-		else
-		{
-		    //vira à esquerda
-		    turningLeft = true;
-		    turningRight = false;
-		    virar_E(turnSpeed,turnSpeed);
-	            Serial.println("Vira à esquerda");
-		  }
-		}
-	}
-	else
-	{
-		turningLeft = false;
-		turningRight = false;
-		andar_F(fullSpeed,fullSpeed);
-		Serial.println("Em frente");
-	}
- 
-  
+    //valida se já está a virar para algum lado
+    if (turningLeft)
+    {
+      virar_E(turnSpeed,turnSpeed);
+    }
+    else if (turningRight)
+    {
+      //continua a virar à direita
+       virar_D(turnSpeed,turnSpeed);
+    }
+    else
+    {
+      //parar motor
+      stop();
+
+      //se tiver servo no futuro, poderemos validar se temos obstáculo à esquerda ou à direita e escolher
+      //para já vira para um lado qualquer	 
+      if(random(100) > 50)
+      {
+        //vira à direita
+	turningRight = true;
+	turningLeft = false;
+	virar_D(turnSpeed,turnSpeed);
+	Serial.println("Vira à direita");
+      }
+      else
+      {
+        //vira à esquerda
+        turningLeft = true;
+	turningRight = false;
+	virar_E(turnSpeed,turnSpeed);
+	Serial.println("Vira à esquerda");
+      }
+    }
+  }
+  else
+  {
+    turningLeft = false;
+    turningRight = false;
+    andar_F(fullSpeed,fullSpeed);
+    Serial.println("Em frente");
+  }
 }
 
-
 //Passar a classe motores
-void stop(void){
-//Stop
-  digitalWrite(E1,LOW);  
+void stop(){
+  //Stop
+  digitalWrite(E1,LOW);
   digitalWrite(E2,LOW);     
 }  
 
