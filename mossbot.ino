@@ -12,11 +12,12 @@ const int fullSpeed = 255; //velocidade máxima
 bool turningLeft = false;
 bool turningRight = false;
 
+
 //Standard PWM DC control
-int E1 = 5;     //Controlo de velocidade de M1 
-int E2 = 6;     //Controlo de velocidade de M2 
-int M1 = 4;    //Controlo de direcção de M1 
-int M2 = 7;    //Controlo de direcção de  M1 
+#define E1 5;    //Controlo de velocidade de M1 
+#define E2 6;    //Controlo de velocidade de M2 
+#define M1 4;    //Controlo de direcção de M1 
+#define M2 7;    //Controlo de direcção de  M1 
 
 #define trigPin 2
 #define echoPin 3
@@ -30,8 +31,8 @@ void setup()
   pinMode(echoPin, INPUT);
   
   //Declarar Portas dos Motores
-  pinMode(2, OUTPUT);
-  pinMode(3, INPUT);
+  //pinMode(2, OUTPUT);
+  //pinMode(3, INPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);     
   pinMode(6, OUTPUT);
