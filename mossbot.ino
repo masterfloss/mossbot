@@ -6,6 +6,9 @@
 const int SafeDistance = 15; //centímetros
 const int LoopCicleDelay = 20; //milisegundos
 
+const int turnSpeed = 100; //velocidade a curvar
+const int fullSpeed = 255; //velocidade máxima
+
 bool turningLeft = false;
 bool turningRight = false;
 
@@ -51,10 +54,10 @@ int DecideBestDirection()
   {
 	//valida se já está a virar para algum lado
 	if (turningLeft)
-		virar_E(100,100);
+		virar_E(turnSpeed,turnSpeed);
 	else if (turningRight)
 		//continua a virar à direita
-		virar_D(100,100);
+		virar_D(turnSpeed,turnSpeed);
 	else
 	{
 		//TODO: invocar motor pára
@@ -69,7 +72,7 @@ int DecideBestDirection()
 			//vira à direita
 			turningRight = true;
 		    	turningLeft = false;
-		    	virar_D(100,100);
+		    	virar_D(turnSpeed,turnSpeed);
 			Serial.println("Vira à direita");
 		}
 		else
@@ -77,7 +80,7 @@ int DecideBestDirection()
 		    //vira à esquerda
 		    turningLeft = true;
 		    turningRight = false;
-		    virar_E(100,100);
+		    virar_E(turnSpeed,turnSpeed);
 	            Serial.println("Vira à esquerda");
 		  }
 		}
@@ -86,7 +89,7 @@ int DecideBestDirection()
 	{
 		turningLeft = false;
 		turningRight = false;
-		andar_F(100,100);
+		andar_F(fullSpeed,fullSpeed);
 	}
  
   
@@ -101,7 +104,8 @@ void stop(void){
 }  
 
 //Passar a classe motores
-void virar_D(int a,int b) {
+void virar_D(int a,int b) //Virar à direita
+{
   analogWrite (E1,a);      
   digitalWrite(M1,HIGH);   
   analogWrite (E2,b);   
@@ -110,7 +114,8 @@ void virar_D(int a,int b) {
 }
 
 //Passar a classe motores
-void andar_F (int a,int b){
+void andar_F (int a,int b) //Andar para a frente
+{
   analogWrite (E1,a);
   digitalWrite(M1,HIGH);   
   analogWrite (E2,b);   
@@ -119,12 +124,22 @@ void andar_F (int a,int b){
 }
 
 //Passar a classe motores
-void virar_E(int a,int b) {
+void virar_E(int a,int b) //Virar à esquerda
+{
   analogWrite (E1,a);
   digitalWrite(M1,LOW);  
   analogWrite (E2,b);   
   digitalWrite(M2,LOW);
   
+}
+
+//Passar a classe motores
+void andar_T (char a,char b) //Andar para trás
+{
+  analogWrite (E1,a);
+  digitalWrite(M1,LOW);   
+  analogWrite (E2,b);    
+  digitalWrite(M2,LOW);
 }
 
 
