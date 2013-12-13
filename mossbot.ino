@@ -24,8 +24,7 @@ int M2 = 7;    //Controlo de direcção de  M1
 //MFV++ Configurações do MOSSBot
 void setup() 
 { 
-  Serial.begin(9600);
-  
+
   //ultrasom
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
@@ -37,6 +36,8 @@ void setup()
   pinMode(5, OUTPUT);     
   pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);  	
+  
+  Serial.begin(19200);  
 } 
 
 //MFV++ Deverá passar a classe própria
