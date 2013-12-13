@@ -91,6 +91,7 @@ int DecideBestDirection()
 		turningLeft = false;
 		turningRight = false;
 		andar_F(fullSpeed,fullSpeed);
+		Serial.println("Em frente");
 	}
  
   
