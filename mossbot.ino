@@ -17,10 +17,10 @@ bool turningRight = false;
 
 //Pins  ==========================================================
 //Standard PWM DC control
-int E1 = 5;    //Controlo de velocidade de M1 
-int E2 = 6;    //Controlo de velocidade de M2 
-int M1 = 4;    //Controlo de direcção de M1 
-int M2 = 7;    //Controlo de direcção de  M2 
+const int E1 = 5;    //Controlo de velocidade de M1 
+const int E2 = 6;    //Controlo de velocidade de M2 
+const int M1 = 4;    //Controlo de direcção de M1 
+const int M2 = 7;    //Controlo de direcção de  M2 
 //ultrasom
 #define trigPin 2   
 #define echoPin 3
