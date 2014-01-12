@@ -1,0 +1,2 @@
+# Catarina Santos
+Tal como os carros modernos que se estacionam sozinhos, ou mantêm a mesma velocidade mesmo sem ter os pés nos pedais, seria interessante que, ao conduzir sozinho e detectasse o sinal vermelho num semáforo (ou algo equivalente), parasse e continuasse a sua marcha apenas quando a luz verde acende. Isto com o auxilio do sensor de cor.
