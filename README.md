@@ -12,7 +12,7 @@ Obstacle Avoider
 
 Line Follower
 -----------
-precisamos dos 2 sensores de cor para mais precisão
+precisamos de utilizar os 2 sensores de cor para mais precisão
 
 Line Avoider
 -----------
@@ -21,3 +21,7 @@ Line Avoider
 Dancing Queen
 -----------
 (dança e desvia-se de obstáculos, se necessário)
+
+Follow Wall
+-----------
+(implementado pelo Prof. Carlos)
