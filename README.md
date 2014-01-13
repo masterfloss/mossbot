@@ -9,6 +9,7 @@ Behaviours
 Obstacle Avoider
 -----------
 (implementado)
+mossbot.ino
 
 Line Follower
 -----------
@@ -29,3 +30,25 @@ Dancing Queen
 Follow Wall
 -----------
 (implementado pelo Prof. Carlos)
+seguir_parede\seguir_parede.ino
+
+
+Hardware
+==========
+Ultrasom
+-----------
+(implementado)
+ultrasom\ultrasom.ino
+
+Motores
+-----------
+(implementado)
+motores\motores.ino
+
+Sensores Cor
+-----------
+(semi implementado)
+Deveria ter um método Calibração que media a cor umas 10 vezes e baseado nessa média e num treshold, sabiamos se estávamos a ver a "mesma cor" ou não
+cor\cor.ino
+
+
