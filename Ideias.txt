@@ -1,5 +1,6 @@
 # Catarina Santos
 Tal como os carros modernos que se estacionam sozinhos, ou mantêm a mesma velocidade mesmo sem ter os pés nos pedais, seria interessante que, ao conduzir sozinho e detectasse o sinal vermelho num semáforo (ou algo equivalente), parasse e continuasse a sua marcha apenas quando a luz verde acende. Isto com o auxilio do sensor de cor.
 #MFV
-Só temos 2 sensores. Sonar que apenas dá distância para obstáculo
-Sensor de cor, dá para seguir ou evitar linha. Ou manter-se em cima de uma mesa
+Só temos 2 sensores. Sonar que apenas dá distância para obstáculos
+Sensor de cor, dá para seguir ou evitar linha. Ou manter-se em cima de uma mesa. 
+Aquilo deve conseguir ler cores a menos de 1cm apenas
