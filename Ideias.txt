@@ -10,3 +10,5 @@ Se o colocarmos um servo a trabalhar com o Sonar o robot escusa de fazer tentati
 aonde identificou o obstaculo vai procurar o melhor caminho para seguir em frente.
 #MFV o robot não tem servo. Eu no meu faço isso, mas tenho um micro servo :-)
 
+# Jorge Varela
+O sensor de linhas poderá servir para detectar uma linha existente no chão, e seguir a mesma, validando se existem luzes acesas, isto poderá servir para implementar num escritorio de modo a prevenir gasto energetico, alertando o segurança que existe luzes acesas.
