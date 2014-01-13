@@ -4,3 +4,8 @@ Tal como os carros modernos que se estacionam sozinhos, ou mantêm a mesma veloc
 Só temos 2 sensores. Sonar que apenas dá distância para obstáculos
 Sensor de cor, dá para seguir ou evitar linha. Ou manter-se em cima de uma mesa. 
 Aquilo deve conseguir ler cores a menos de 1cm apenas
+
+# JQUITERIO - Esquivar obstaculos com servo
+Se o colocarmos um servo a trabalhar com o Sonar o robot escusa de fazer tentativas para avançar. A partir do mesmo local 
+aonde identificou o obstaculo vai procurar o melhor caminho para seguir em frente.
+
