@@ -8,4 +8,5 @@ Aquilo deve conseguir ler cores a menos de 1cm apenas
 # JQUITERIO - Esquivar obstaculos com servo
 Se o colocarmos um servo a trabalhar com o Sonar o robot escusa de fazer tentativas para avançar. A partir do mesmo local 
 aonde identificou o obstaculo vai procurar o melhor caminho para seguir em frente.
+#MFV o robot não tem servo. Eu no meu faço isso, mas tenho um micro servo :-)
 
