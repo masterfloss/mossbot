@@ -1,5 +1,10 @@
 # Catarina Santos
 Tal como os carros modernos que se estacionam sozinhos, ou mantêm a mesma velocidade mesmo sem ter os pés nos pedais, seria interessante que, ao conduzir sozinho e detectasse o sinal vermelho num semáforo (ou algo equivalente), parasse e continuasse a sua marcha apenas quando a luz verde acende. Isto com o auxilio do sensor de cor.
+
+#Rui Pinto
+Num parque de estacionamento subterrâneo, validar se os veiculos se encontram estacionados correctamente, não ocupando mais de um lugar, garantido que a informação sobre a disponibilidade de lugares está correcta.
+
+
 #MFV
 Só temos 2 sensores. Sonar que apenas dá distância para obstáculos
 Sensor de cor, dá para seguir ou evitar linha. Ou manter-se em cima de uma mesa. 
@@ -16,3 +21,8 @@ O sensor de linhas poderá servir para detectar uma linha existente no chão, e 
 
 #Rui Pinto
 Eu tinha pensado aliar a questão do gasto energético com a segurança, o arduino pode percorrer corredores de um edifício, seguindo uma linha e alertando caso existam luzes acesas mas também movimentos.
+
+#Rui Pinto
+Outro possibilidade seria usar o arduino para estudos energéticos. Deixando-o a seguir trajectos definidos e ele ir informando com quantas pessoas se cruzou num dado período de tempo. Assim seria possível analisar por onde se deslocam as pessoas nas chamadas "horas mortas" de um Hospital, por exemplo.
+
+
