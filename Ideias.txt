@@ -26,3 +26,29 @@ Eu tinha pensado aliar a questão do gasto energético com a segurança, o ardui
 Outro possibilidade seria usar o arduino para estudos energéticos. Deixando-o a seguir trajectos definidos e ele ir informando com quantas pessoas se cruzou num dado período de tempo. Assim seria possível analisar por onde se deslocam as pessoas nas chamadas "horas mortas" de um Hospital, por exemplo.
 
 
+#Alexandre Antunes
+Para seguir uma linha é necessário sensores. Mas aqui tenho um códogo simples para seguir uma linha
+//seguir uma linha com dois sensores. Esta linha tem de ter o tamanho do carro. 
+void seguir()
+{
+	int dir = digitalRead(); //ler sensor direita
+	int esq = digitalRead(); //ler sensor esquerda
+	
+	if (dir==1 && esq==1)
+	{
+		motores(0,0,0); //Pretendido andar em frente
+	}
+	if (dir==1 && esq==0)
+	{
+		motores(0,0,0); //Pretendido virar para a esquerda
+	}
+	if (dir==0 && esq==1)
+	{
+		motores(0,0,0); //Pretendido virar para a direita
+	}
+	if (dir==0 && esq==0)
+	{
+		motores(0,0,0); //Pretendido Parar
+	}
+}
+
