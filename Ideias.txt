@@ -12,3 +12,7 @@ aonde identificou o obstaculo vai procurar o melhor caminho para seguir em frent
 
 # Jorge Varela
 O sensor de linhas poderá servir para detectar uma linha existente no chão, e seguir a mesma, validando se existem luzes acesas, isto poderá servir para implementar num escritorio de modo a prevenir gasto energetico, alertando o segurança que existe luzes acesas.
+
+
+#Rui Pinto
+Eu tinha pensado aliar a questão do gasto energético com a segurança, o arduino pode percorrer corredores de um edifício, seguindo uma linha e alertando caso existam luzes acesas mas também movimentos.
