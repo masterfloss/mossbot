@@ -13,7 +13,14 @@ obstacle_avoider\obstacle_avoider.ino
 
 Line Follower
 -----------
-precisamos de utilizar os 2 sensores de cor para mais precisão
+(semi-implementado)
+line_follower\line_follower.ino
+falta:
+ calibrar cores inicialmente
+ precisamos de utilizar os 2 sensores de cor para mais precisão
+ alterar o pin do sensor em falta
+ perceber o que se fazer quando se perde completamente da linha preta
+ definir o que é preto
 
 Line Avoider
 -----------
