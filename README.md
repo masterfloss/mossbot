@@ -21,6 +21,7 @@ falta:
  alterar o pin do sensor em falta
  perceber o que se fazer quando se perde completamente da linha preta
  definir o que é preto
+ PID??
 
 Line Avoider
 -----------
