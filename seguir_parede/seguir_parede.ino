@@ -1,4 +1,3 @@
-
 void move_m(int md,int me){ 
   //Ordem para os motores
   digitalWrite(4,HIGH); 
@@ -29,6 +28,9 @@ int medir()
 
 void loop()
 {
+
+  int threshold=10;\\MFV++ distância da parede pretendida 
+  
   int duration, distance;
   digitalWrite(2, HIGH);
   delayMicroseconds(1000);
@@ -44,9 +46,13 @@ void loop()
   else {
     Serial.print(distance);
     Serial.println(" cm");
-    if (distance > 10){
+    //MFV++ se a distância se manter, segue em frente
+    if (distance = threshold){
+        move_m(80,80);
+        }
+    else 
+    if (distance > threshold){
         move_m(0,80);
-        
         }
     else{
         move_m(80,0);
