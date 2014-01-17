@@ -1,0 +1,19 @@
+Objectivo: Criar um robot com capacidade de aprendizagem.
+
+
+O robot ao deparar-se com um obstáculo à sua frente deve tomar uma das seguintes acções.
+
+Possíveis acções a tomar pelo robot:
+Acção A - virar -90º - variável auxiliar a
+Acção B - virar 90º - variável auxiliar b
+Acção C - virar 180º - variável auxiliar c
+
+Após 5 segundos de tomar uma acção, o robot incrementa em '0.1' a variável associada à acção tomada, sendo a variável um valor entre '0' e '1'.
+
+Se o robot tomar 2 acções em menos de 5 segundos entre as mesmas as variáveis devem ser diminuídas em '-0.1'.
+
+Para cada possível acção a tomar terá de ser gerado uma variável de valor random entre '0' e '1'.
+
+O robot decidirá qual a acção a tomar multiplicando o random pelo valor das variáveis auxiliares das acções possiveis.
+
+A acção a tomar será a acção em que o resultado obtido seja o mais aproximado do valor random para cada acção.
