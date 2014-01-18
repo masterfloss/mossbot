@@ -52,3 +52,8 @@ void seguir()
 	}
 }
 
+
+# Catarina Santos
+Pombo de correio: Partindo do principio que o Arduino sabe as suas coordenadas actuais num mapa, inserindo as coordenadas de destino este levará o "correio" ao seu destino, desviando-se dos objestáculos no seu precurso, até as suas coordenadas actuais serem iguais às de destino.
+Quando chega ao seu destino emite um som de alerta, para avisar que chegou (Não sei se o Arduino do professor algum componente para gerar este alerta de chegada).
+
