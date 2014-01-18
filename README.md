@@ -58,7 +58,7 @@ motores\motores.ino
 Sensores Cor
 -----------
 (semi implementado)
-Deveria ter um método Calibração que media a cor umas 10 vezes e baseado nessa média e num treshold, sabiamos se estávamos a ver a "mesma cor" ou não
-cor\cor.ino
+Deveria ter um método Calibração que media o cinza umas 10 vezes e baseado nessa média e num threshold, sabiamos se estávamos a ver o "mesma cinza" ou não
+grayscale\grayscale.ino
 
 
