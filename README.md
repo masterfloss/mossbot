@@ -7,8 +7,11 @@ A nxt4you and MOSS project.
 Hardware
 -----------
 2x Grayscale Sensor: Analog sensors
+
 1x Ultrasom: HC-SR04 (range de 2cm - 400cm)
+
 1x Arduino Romeo
+
 
 Line Follower
 -----------
