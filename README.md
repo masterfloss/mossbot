@@ -4,12 +4,11 @@ MOSSBot
 A nxt4you and MOSS project.
 
 
-Behaviours
-==========
-Obstacle Avoider
+Hardware
 -----------
-(implementado)
-obstacle_avoider\obstacle_avoider.ino
+2x Grayscale Sensor: Analog sensors
+1x Ultrasom: HC-SR04 (range de 2cm - 400cm)
+1x Arduino Romeo
 
 Line Follower
 -----------
