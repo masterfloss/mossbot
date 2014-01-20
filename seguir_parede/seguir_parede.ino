@@ -29,7 +29,9 @@ int medir()
 void loop()
 {
 
-  int threshold=10;\\MFV++ distância da parede pretendida 
+  int safe_distance=20;\\MFV++ distância da parede pretendida
+  int perfect_distance=18;\\MFV++ distância da parede pretendida 
+  int min_distance=15;\\MFV++ distância da parede pretendida 
   
   int duration, distance;
   digitalWrite(2, HIGH);
@@ -46,16 +48,27 @@ void loop()
   else {
     Serial.print(distance);
     Serial.println(" cm");
-    //MFV++ se a distância se manter, segue em frente
-    if (distance = threshold){
+    //MFV++ se a distância estiver no range pretendido, segue em frente
+    if (distance = perfect_distance){
         move_m(80,80);
         }
     else 
-    if (distance > threshold){
+    //MFV++ vira rápido, está muito perto
+    if (distance < min_distance){
         move_m(0,80);
         }
     else{
-        move_m(80,0);
+    //MFV++ vira, mas sem pressa
+    if (distance <  safe_distance){
+        move_m(20,80);
+        }
+    else{
+    //MFV++ vira rápido, está muito longe
+    if (distance >  safe_distance + min_distance){
+        move_m(80,00);
+        }
+    else{
+        move_m(80,20);
         
     }
   }
