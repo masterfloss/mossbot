@@ -57,3 +57,13 @@ void seguir()
 Pombo de correio: Partindo do principio que o Arduino sabe as suas coordenadas actuais num mapa, inserindo as coordenadas de destino este levará o "correio" ao seu destino, desviando-se dos objestáculos no seu precurso, até as suas coordenadas actuais serem iguais às de destino.
 Quando chega ao seu destino emite um som de alerta, para avisar que chegou (Não sei se o Arduino do professor tem algum componente para gerar este alerta de chegada).
 
+# Carlos Bernardino
+Detector de metais: Usar o Arduino para percorrer as pistas de um aerodromo com o objectivo de encontrar metais.
+Caso encontre algum metal, alertar quem de direito, tirar imediatamente 3 fotos e enviar por mensagem para um email/telemóvel previamente designado,
+e fazer uso de um iman para os apanhar. 
+
+# Carlos Bernardino
+Links interessantes sobre arduino
+http://video.mit.edu/watch/arduino-tutorial-1-10950/
+
+
