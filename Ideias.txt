@@ -67,4 +67,8 @@ Links interessantes sobre arduino
 http://video.mit.edu/watch/arduino-tutorial-1-10950/
 http://pluralsight.com/training/Courses/TableOfContents/arduino-introduction
 
+# José Ribeiro
+Ajudar um invisisual em algumas tarefas simples em casa, guiando-o com o sensor de proximidade ou informar se existe alguma luz acesa em casa, para efeitos de poupança de energia.
+Detectar objectos perdidos por baixo de peças de imobiliário ou outros sitios de dificil acesso.
+
 
